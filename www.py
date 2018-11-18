@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
 from application import app
+
+
+'''
+统一拦截处理和统一错误处理
+'''
+from web.interceptors.AuthInterceptor import  *
+
+
+'''
+蓝图功能，对所有的url进行蓝图功能配置
+'''
 from web.controllers.index import route_index
 from web.controllers.user.User import route_user
 from web.controllers.static import route_static
